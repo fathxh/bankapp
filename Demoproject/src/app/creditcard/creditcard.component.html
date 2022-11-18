@@ -1,0 +1,83 @@
+<div class="container col-md-12 mt-0">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center ">credit card</h3>
+
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="onsubmit()">
+                    <!-- [formGroup]="registerform" -->
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="uname" name="uname" placeholder="Name"
+                            id="reg_name" required>
+                        <!-- <div style="color: brown" *ngIf="(this.registerform.get('uname')?.errors)&&(this.registerform.get('uname')?.touched)">invalid</div> -->
+
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="acno" name="acno" placeholder="account number" id="reg_accnum" required>
+                        <!-- <input type="text" class="form-control" formControlName="acno" name="acno" placeholder="account number" id="reg_accnum" required> -->
+                        <!-- <div style="color: brown" *ngIf="(this.registerform.get('acno')?.errors)&&(this.registerform.get('acno')?.touched)">invalid</div> -->
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="address" name="address"
+                            placeholder="Address" id="reg_accnum" required>
+                        <!-- <div style="color: brown" *ngIf="(this.registerform.get('acno')?.errors)&&(this.registerform.get('acno')?.touched)">invalid</div> -->
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="pan" name="pan"
+                            placeholder="PAN cardnumber" id="reg_accnum" required>
+                        <!-- <div style="color: brown" *ngIf="(this.registerform.get('acno')?.errors)&&(this.registerform.get('acno')?.touched)">invalid</div> -->
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="adhaar" name="adhaar" placeholder="adhaar" id="reg_password" required>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Register" class="btn float-right login_btn " style="width:50%">
+                    </div>
+                </form>
+            </div>
+            <!-- <p style="color:white;align-items:baseline;">already a user? <a href="">Login</a></p> -->
+        </div>
+    </div>
+</div>
+<table class="table table-dark">
+    <thead>
+        <tr class="table-active">
+            <th scope="row">name</th>
+            <th scope="row">address</th>
+            <th scope="row">account number</th>
+            <th scope="row">PAN card</th>
+            <th scope="row">adhaar nummber</th>
+          </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let data of dummyarray">
+        <td  class="">{{data.name}}</td>
+        <td  class="table-active">{{data.address}}</td>
+        <td  class="table-active">{{data.acno}}</td>
+        <td  class="table-active">{{data.pan}}</td>
+        <td  class="table-active">{{data.adhaar}}</td>
+      </tr>
+    </tbody>
+  </table>

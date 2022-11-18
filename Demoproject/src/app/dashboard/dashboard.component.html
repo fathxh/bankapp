@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+<!-- <p>dashboard works!</p> -->
+<div class="row">
+    <div class="col-6">
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center h-100">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Deposite</h3>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="depo()" >
+                  <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" [(ngModel)]="dacno" name="acno" placeholder="Account name" id="reg_name" required>
+                                
+                            </div>
+        
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control"[(ngModel)]="damount"  name="amount" placeholder="amount" id="reg_accnum" required>
+                                
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" [(ngModel)]="dpassword" name="password" placeholder="password" id="reg_password" required>
+                            </div>
+                            
+                            <div>
+                                <input type="submit" value="Deposit" class="btn float-right login_btn " style="width:50%" >
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <div class="col-6">
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Withdraw</h3>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="Withdraw()">
+                  <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" [(ngModel)]="wacno"  name="acno" placeholder="Account name" id="reg_name" required>
+                                
+                            </div>
+        
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" [(ngModel)]="wamount" name="amount" placeholder="amount" id="reg_accnum" required>
+                                
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" [(ngModel)]="wpassword" name="password" placeholder="password" id="reg_password" required>
+                            </div>
+                            
+                            <div>
+                                <input type="submit" value="Withdraw" class="btn float-right login_btn " style="width:50%" >
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+     </div>
+
