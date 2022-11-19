@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
         //   }
     },(result:any)=>{
       // console.log("test:",result.error.message)
-      alert(result.error.message)
+      alert(result.error.msg)
     })
   }
     // .subscribe((result:any)=>{
@@ -98,7 +98,7 @@ export class DashboardComponent implements OnInit {
       }
     },(result:any)=>{
       console.log("test:",result.error.message)
-      alert(result.error.message)
+      alert(result.error.msg)
       
 
     })

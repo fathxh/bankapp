@@ -1,6 +1,6 @@
 const express=require('express')
 const db=require('./database')
-const dab=require('./transactions')
+const tr=require('./transactions')
 const jwt=require('jsonwebtoken')
 const { User } = require('./db')
 const cors=require("cors")
@@ -67,7 +67,7 @@ app.post('/login',(req,res)=>{
 
 
 app.post('/deposit',jwtmiddleware,(req,res)=>{
-    dab.depo(req.body.acno,req.body.password,req.body.amount)
+    tr.depo(req.body.acno,req.body.password,req.body.amount)
     .then(user=>{
         if(user){
             res.status(user.statuscode).json(user)
@@ -76,7 +76,7 @@ app.post('/deposit',jwtmiddleware,(req,res)=>{
     
 })
 app.post('/withdraw',jwtmiddleware,(req,res)=>{
-    dab.Withdraw(req.body.acno,req.body.password,req.body.amount)
+    tr.Withdraw(req.body.acno,req.body.password,req.body.amount)
     .then(user=>{
         if(user){
             res.status(user.statuscode).json(user)
@@ -84,7 +84,7 @@ app.post('/withdraw',jwtmiddleware,(req,res)=>{
     })
 })
 app.post('/statement',jwtmiddleware,(req,res)=>{
-    dab.tHistory(req.body.acno,req.body.password,req.body.amount)
+    tr.tHistory(req.body.acno)
     .then(result=>{
         if(result){
             res.status(result.statuscode).json(result)

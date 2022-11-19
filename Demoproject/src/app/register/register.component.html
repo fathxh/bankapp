@@ -13,27 +13,37 @@
               </div>
               <div class="card-body">
                   <form (ngSubmit)="onregister()" [formGroup]="registerform">
+                    
+                    
+
+
+
+                    
             <div class="input-group form-group">
                           <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-user"></i></span>
                           </div>
-                          <input type="text" class="form-control" formControlName="uname" name="uname" placeholder="Name" id="reg_name" required>
-                          
-                      </div>
-  
-                      <div class="input-group form-group">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-user"></i></span>
-                          </div>
                           <input type="text" class="form-control" formControlName="acno" name="acno" placeholder="account number" id="reg_accnum" required>
-                          <div style="color: brown" *ngIf="(this.registerform.get('acno')?.errors)&&(this.registerform.get('acno')?.touched)">invalid</div>
+                        <div style="color: brown" *ngIf="(this.registerform.get('acno')?.errors)&&(this.registerform.get('acno')?.touched)">Numbers only</div>
                           
                       </div>
+                      <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" formControlName="uname" name="uname" placeholder="Name" id="reg_name" required>
+                        <div style="color: brown" *ngIf="(this.registerform.get('uname')?.errors)&&(this.registerform.get('uname')?.touched)">Alphabet only</div>
+                        
+                    </div>
+  
+        
                       <div class="input-group form-group">
                           <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-key"></i></span>
                           </div>
                           <input type="password" class="form-control" formControlName="password" name="password" placeholder="password" id="reg_password" required>
+                          <div style="color: brown" *ngIf="(this.registerform.get('password')?.errors)&&(this.registerform.get('password')?.touched)">must be 4 Numbers</div>
+
                       </div>
                       
                       <div>

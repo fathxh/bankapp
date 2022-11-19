@@ -39,8 +39,10 @@ export class RegisterComponent implements OnInit {
           alert('invalid form')
         }
       },(result)=>{
+        
         console.log("test:",result.error.message)
-        alert(result.error.message)
+        alert(result.error.msg)
+        this.rout.navigateByUrl('')
         
 
       })

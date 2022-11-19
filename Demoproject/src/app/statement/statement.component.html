@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<table class="table table-dark">
+    <thead>
+        <tr class="table-active">
+            <th scope="row">mode</th>
+            <th scope="row">type</th>
+            <th scope="row">amount</th>
+            <th scope="row">status</th>
+            
+          </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let data of array">
+        <td  class="">{{data.mode}}</td>
+        <td  class="table-active">{{data.type}}</td>
+        <td  class="table-active">{{data.amount}}</td>
+        <td  class="table-active">{{data.status}}</td>
+        <!-- <td  class="table-active">{{data.adhaar}}</td> -->
+      </tr>
+      <tr>
+        <td colspan="4" class="table-active text-center"><button class="btn btn-outline-success rounded-pill" (click)="statement()">Refresh</button></td>
+      </tr>
+    </tbody>
+  </table>

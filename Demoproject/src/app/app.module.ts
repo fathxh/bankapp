@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { CreditcardComponent } from './creditcard/creditcard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StatementComponent } from './statement/statement.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     NavbarComponent,
     RegisterComponent,
-    CreditcardComponent
+    CreditcardComponent,
+    StatementComponent
   ],
   imports: [
     BrowserModule,

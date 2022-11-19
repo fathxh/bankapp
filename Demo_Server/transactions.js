@@ -3,8 +3,8 @@ const db=require("./db")
 
 // const database=ds.database
 
-const tHistory=(acno,password)=>{
-  return db.User.findOne({acno,password})
+const tHistory=(acno)=>{
+  return db.User.findOne({acno})
   .then(user=>{
     if(user){
       return{

@@ -38,4 +38,11 @@ export class TransactionService {
     }
     return this.http.post("http://localhost:3000/withdraw",data,this.getOptions())
   }
+  statement(acno:any){
+    // const acno=JSON.parse(localStorage.getItem('currentAcno')||'')
+    const data={
+      acno
+    }
+    return this.http.post("http://localhost:3000/statement",data,this.getOptions())
+  }
 }
