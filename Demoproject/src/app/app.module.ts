@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { CreditcardComponent } from './creditcard/creditcard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StatementComponent } from './statement/statement.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StatementComponent } from './statement/statement.component';
     NavbarComponent,
     RegisterComponent,
     CreditcardComponent,
-    StatementComponent
+    StatementComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

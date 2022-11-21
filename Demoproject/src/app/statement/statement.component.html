@@ -6,6 +6,7 @@
             <th scope="row">type</th>
             <th scope="row">amount</th>
             <th scope="row">status</th>
+            <th scope="row">time</th>
             
           </tr>
     </thead>
@@ -15,10 +16,11 @@
         <td  class="table-active">{{data.type}}</td>
         <td  class="table-active">{{data.amount}}</td>
         <td  class="table-active">{{data.status}}</td>
+        <td  class="table-active">{{data.time|date:'short'}}</td>
         <!-- <td  class="table-active">{{data.adhaar}}</td> -->
       </tr>
       <tr>
-        <td colspan="4" class="table-active text-center"><button class="btn btn-outline-success rounded-pill" (click)="statement()">Refresh</button></td>
+        <td colspan="5" class="table-active text-center"><button class="btn btn-outline-success rounded-pill" (click)="ngOnInit()">Refresh</button></td>
       </tr>
     </tbody>
   </table>

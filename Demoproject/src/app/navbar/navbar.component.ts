@@ -1,8 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TransactionService } from '../service/transaction.service';
 // import { LoginComponent } from '../login/login.component';c
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +11,7 @@ import { TransactionService } from '../service/transaction.service';
 export class NavbarComponent implements OnInit {
 
   user:any
-  constructor(private root:Router) { 
+  constructor(private root:Router,private http:HttpClient) { 
     this.user=JSON.parse(localStorage.getItem("currentName")||"")
   }
 
@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit {
   logout(){
     this.root.navigateByUrl('')
   }
+  
+  
+  
   
 
 }

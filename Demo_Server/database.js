@@ -90,7 +90,7 @@ const register=(acno,uname,password)=>{
         return {
             "status":false,
             "statuscode":404,
-            "message":"password incurrect"
+            "message":"Account not found"
         }
       }
       

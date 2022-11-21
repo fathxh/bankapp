@@ -9,11 +9,10 @@ import { TransactionService } from '../service/transaction.service';
 export class StatementComponent implements OnInit {
 
   constructor(private tr:TransactionService) { }
+  array:any
 
   ngOnInit(): void {
-  }
-  array:any
-  statement(){
+
     
   const acno=JSON.parse(localStorage.getItem('currentAcno')||"")
     console.log(acno);
@@ -39,5 +38,7 @@ export class StatementComponent implements OnInit {
 
     })
   }
+  }
+  
 
-}
+

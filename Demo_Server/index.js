@@ -91,6 +91,15 @@ app.post('/statement',jwtmiddleware,(req,res)=>{
         }
     })
 })
+app.delete('/delete/:acno',(req,res)=>{
+    tr.deleteac(req.params.acno)
+    .then(result=>{
+        console.log("delete",result);
+        if(result){
+            res.status(result.statuscode).json(result)
+        }
+    })
+})
 
 
 //resolving http req

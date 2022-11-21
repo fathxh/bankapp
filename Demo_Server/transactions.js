@@ -17,6 +17,20 @@ const tHistory=(acno)=>{
   })
     
 }
+const deleteac=(acno)=>{
+  return db.User.deleteOne({acno})
+  .then(user=>{
+    if(user){
+      return{
+        statuscode:203,
+        status:true,
+        "acno":acno
+      }
+    }
+    
+  })
+    
+}
 
 const Withdraw=(acno,password,amount)=>{
   
@@ -31,7 +45,8 @@ const Withdraw=(acno,password,amount)=>{
           mode:"online",
           type:"withdraw",
           status:"success",
-          amount
+          amount,
+          time:new Date()
       })
       user.save()
       return{
@@ -83,7 +98,8 @@ return db.User.findOne({acno,password})
       "mode":"online",
       "type":"deposit",
       "status":"success",
-      amount
+      amount,
+      time:new Date()
     })
     user.save()
     return{
@@ -179,4 +195,4 @@ return db.User.findOne({acno,password})
 
 // }
 
-module.exports={depo,Withdraw,tHistory}
+module.exports={depo,Withdraw,tHistory,deleteac}

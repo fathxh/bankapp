@@ -124,4 +124,10 @@ export class DashboardComponent implements OnInit {
   // }
 
 }
+flag:any=true
+
+onbtn(){
+  this.flag=false
+
+}
 }
