@@ -11,13 +11,14 @@ import { TransactionService } from '../service/transaction.service';
 export class NavbarComponent implements OnInit {
 
   user:any
-  constructor(private root:Router,private http:HttpClient) { 
+  constructor(private root:Router) { 
     this.user=JSON.parse(localStorage.getItem("currentName")||"")
   }
 
   ngOnInit(): void {
   }
   logout(){
+    localStorage.removeItem('currentAcno')
     this.root.navigateByUrl('')
   }
   

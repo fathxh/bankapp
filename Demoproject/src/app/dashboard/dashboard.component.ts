@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import { AuthserviceService } from '../service/authservice.service';
 // import { HttpClient } from "@angular/common/http";
 // import { Router } from '@angular/router';
@@ -20,9 +21,13 @@ export class DashboardComponent implements OnInit {
   wamount:any
 
 
-  constructor(private tr:TransactionService) { }
+  constructor(private tr:TransactionService,private root:Router) { }
 
   ngOnInit(): void {
+    if(!localStorage.getItem('currentAcno')){
+      alert("please log in again")
+      this.root.navigateByUrl('')
+    }
   }
   
   

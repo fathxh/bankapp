@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
   deleteacc(){
-    var conf=confirm('deleting  account can loose all your data')
+    var conf=confirm('please confirm delete..')
   if (conf) {
     const acno=JSON.parse(localStorage.getItem("currentAcno")||"")
     this.http.delete(`http://localhost:3000/delete/${acno}`)
