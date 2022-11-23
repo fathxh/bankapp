@@ -1,6 +1,7 @@
 <!-- <p>about works!</p> -->
 <app-navbar></app-navbar>
 <div class="container m-5">
+  <app-delete [item]="delacno" (onDelete)="delete($event)" (onCancel)="cancel()"></app-delete>
 <div class="card text-center m-auto">
     <!-- <div class="card-header text-light">
       About
